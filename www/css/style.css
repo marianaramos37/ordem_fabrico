@@ -1,0 +1,1845 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/open_sans/OpenSans-Regular.ttf);
+    font-weight: 400;
+  }
+  
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/open_sans/OpenSans-SemiBold.ttf);
+    font-weight: 600;
+}
+  
+@font-face {      
+    font-family: 'Open Sans';
+    src: url(fonts/open_sans/OpenSans-Bold.ttf);
+    font-weight: 700;
+}
+  
+@font-face {
+    font-family: 'Maven Pro';
+    src: url(fonts/maven_pro/MavenPro-Regular.ttf);
+    font-weight: 400;
+}
+  
+@font-face {
+    font-family: 'Maven Pro';
+    src: url(fonts/maven_pro/MavenPro-SemiBold.ttf);
+    font-weight: 600;
+}
+  
+@font-face {
+    font-family: 'Maven Pro';
+    src: url(fonts/maven_pro/MavenPro-Bold.ttf);
+    font-weight: 700;
+}
+
+
+/* Common */
+  
+body {
+    --body-background-color: #f1f1f1;
+    --dark-green-color: #227A6B;
+    --light-green-color:#71B099;
+    --details-color:#CABB99;
+    --light-details-color: #d6ccb6;
+    --light-color: #FAFAFA;
+    --dark-text-color:#252525;
+    --menu-shadow-color:rgba(71,71,71,0.5);
+    --shadow-color:rgba(71,71,71,0.2);
+    --error-color: rgb(255,80,80);
+    --valid-color: rgb(100,200,100);
+    --intermittent-color: rgb(224, 170, 19);
+  
+    background-color: var(--body-background-color);
+    margin: 0;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    color: var(--dark-text-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-wrap: break-word;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--dark-text-color);
+    margin: 0 0 2em;
+}
+
+
+/* Error messages and hints */
+
+.hint {
+    color: var(--error-color);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.error {
+    color: var(--error-color);
+    font-weight: 700;
+    display: block;
+    text-align: center;
+}
+  
+.error > a {
+    color: var(--error-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+  
+.messages{
+    margin: auto;
+    text-align: center;
+}
+
+
+/* Buttons */
+
+.beige_btn {
+    color: var(--light-color);
+    background-color: var(--light-details-color);
+    border-radius: 2em;
+    font: 700 0.8em 'Open Sans';
+    text-transform: uppercase;
+    border: none;
+    padding: 0.5em 2.8em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2em;
+    
+}
+
+.beige_btn:hover {
+    background-color: var(--details-color);
+}
+
+.green_btn {
+    color: var(--light-color);
+    background-color: var(--light-green-color);
+    border-radius: 2em;
+    font-weight: 700;
+    font-size:  0.8em;
+    text-transform: uppercase;
+    border: none;
+    padding: 0.5em 2.8em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+  
+.green_btn:hover {
+    background-color: var(--dark-green-color);
+}
+
+
+/* Header/Menus */
+  
+header{
+    margin: 0;
+}
+  
+#menu-top {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-green-color);
+    padding: 0.8rem 8rem;
+}
+  
+#social {
+    flex: 1;
+}
+  
+#social > a {
+    background-color: var(--light-color);
+    color: var(--dark-green-color);
+    border-radius: 1em;
+    height: 1.5em;
+    width: 1.5em;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    text-decoration: none;
+}
+  
+#desktop_session_menu > ul {
+    margin: 0;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+  
+#desktop_session_menu > ul > li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 2em;
+}
+  
+#desktop_session_menu > ul > li > a {
+    text-decoration: none;
+    color: var(--light-color);
+    font-weight: 600;
+    font-size: 0.9em;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+#desktop_session_menu > ul > li > p {
+    text-decoration: none;
+    color: var(--light-color);
+    font-size: 0.9em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+}
+  
+#desktop_session_menu > ul > #logout_btn input {
+    color: var(--light-color);
+    background-color: transparent;
+    border: unset;
+    font: 600 0.9em 'Open Sans';
+    text-decoration: underline;
+    text-underline-position: under;
+    padding: 0;
+}
+  
+.fa-envelope {
+    font-size: 1.4rem;
+}
+  
+#menu-bar {
+    background-color: var(--light-color);
+    padding: 0.8rem 8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    -webkit-box-shadow: 0px 8px 16px -8px var(--menu-shadow-color);
+    -moz-box-shadow: 0px 8px 16px -8px var(--menu-shadow-color);
+    box-shadow: 0px 8px 16px -8px var(--menu-shadow-color);
+    position: relative;
+    z-index: 1;
+}
+  
+#page_title {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+  
+.fa-paw {
+    font-size: 1.5em;
+    color: var(--details-color);
+}
+
+.proposals_pending {
+    background-color: var(--dark-green-color);
+    padding: 0.3rem 0.5rem;
+    border-radius: 100%;
+    font-family: 'Maven Pro';
+    font-weight: 700;
+    font-size: 0.8em;
+    color: var(--light-color);
+    position: relative;
+    z-index: 1;
+    margin-left: 0.2em;
+    display: none;
+}
+  
+#page_title h1 {
+    font-family: 'Maven Pro';
+    font-weight: 700;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: 0.4em;
+}
+  
+#page_title > a {
+    text-decoration: none;
+    color: var(--dark-text-color);
+}
+  
+#desktop_menu > ul{
+    margin: 0;
+    padding: 0;
+}
+  
+#desktop_menu > ul > li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+}
+  
+#desktop_menu > ul > li > a {
+    text-decoration: none;
+    color: var(--dark-text-color);
+    font-family: 'Maven Pro';
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 3rem;
+}
+  
+#desktop_menu > ul > li > ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    left: 0;
+    display: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.4rem 0 0;
+    background-color: var(--light-color);
+    margin-left: 0.7rem;
+}
+  
+#desktop_menu > ul > li > ul > li > a {
+    text-decoration: none;
+    color: var(--dark-text-color);
+    font-family: 'Maven Pro';
+    font-size: 0.9em;
+    font-weight: 600;
+}
+  
+#desktop_menu >  ul > li:hover > ul,
+#desktop_menu >  ul > li > ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+  
+#desktop_menu > ul > li > ul > li {
+    background-color: var(--light-color);
+    display: block;
+    padding: 0.8rem;
+    list-style-type: none;
+    min-width: 8rem;
+}
+
+#responsive_menu ul{
+    display: none;
+}
+
+#responsive_menu_icon{
+    display: none;
+    cursor: pointer;
+}
+
+
+/* Footer */
+  
+body > footer {
+    margin-top: 2em;
+    background-color: var(--details-color);
+    padding: 0.5rem 8rem;
+}
+  
+body > footer > p {
+    margin: 0;
+    color: var(--light-color);
+}
+  
+body > footer > p::after {
+    content: " \00a9";
+}
+
+
+/* Register, Login and Edit Profile Forms */
+
+#register, #login, #editProfile  {
+    padding: 0 8rem;
+    margin: 4rem 0;
+    flex-grow: 1;
+}
+
+#login > span {
+    display: block;
+    text-align: center;
+    margin: 0 0 2em;
+}
+
+#register > form > .hint, #editProfile > form > .hint {
+    display: block;
+    font-size: 0.8em;
+    visibility: hidden;
+    margin-bottom: 1em;
+}
+
+#login > span > a{
+    color: var(--light-green-color);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin: 0 0.1em;
+}
+
+#register > form > label, #login > form > label, #editProfile > form > label {
+    font-weight: 600;
+    width: 100%;
+}
+
+#editProfile > form > input[type=password],
+#editProfile > form > input[type=text],
+#register > form > input[type=password],
+#register > form > input[type=text],
+#login > form > label > input[type=password],
+#login > form > label > input[type=text]{
+    display: block;
+    margin-top: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: var(--light-color);
+    border: 2px solid var(--light-green-color);
+    margin-bottom: 1em;
+    width: calc(100% - 4px - 1em);
+}
+
+#register > form input.invalid, #editProfile > form input.invalid {
+    border: 2px solid var(--red-color);
+}
+
+#register > form input.invalid + .hint, #editProfile > form input.invalid + .hint{
+    visibility: visible;
+}
+
+#register > form, #login > form, #editProfile > form {
+    max-width: 20em;
+    margin: 0 auto;
+}
+
+#register > form > input[type = submit],  #login > form > input[type=submit] , #editProfile > form > input[type=submit] {
+    margin: 3em auto;
+    color: var(--light-color);
+    background-color: var(--light-green-color);
+    border-radius: 2em;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.5em 4em;
+    display: block;
+}
+
+#editProfile > form > input[name = deleteprofile_btn] {
+    color: var(--light-color);
+    background-color: var(--error-color);
+    padding: 0.5em 2.8em;
+}
+
+
+/* Home Page */
+
+#banner {
+    margin: 0;
+    position: relative;
+}
+
+#banner > img{
+    width: 100%;
+}
+
+#banner_text {
+    position: absolute;
+    margin-left: 13em;
+    max-width: 24em;
+    top: 18%;
+}
+
+#banner_text > h2 {
+    color: var(--light-color);
+    font-family: 'Maven Pro';
+    text-transform: uppercase;
+    font-size: 1.6em;
+    text-align: left;
+}
+
+#banner_text > p {
+    color: var(--light-color);
+}
+
+#adopt_thumbnails {
+    padding: 0 18rem;
+    margin: 4em 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#adopt_thumbnails > h2 {
+    flex-basis: 100%;
+}
+
+#adopt_thumbnails > .green_btn {
+    margin-top: 3em;
+}
+
+.adopt_thumbnail {
+    background-color: var(--light-color);
+    border-radius: 0.5em;
+    width: calc(31% - 2em);
+    -webkit-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    -moz-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    padding: 1em 1em 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.adopt_thumbnail > img {
+    width: 100%;
+    border-radius: 0.5em 0.5em 0 0;
+    display: block;
+    height: 14em;
+    object-fit: cover;
+    object-position: top;
+    height: 14em;
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.adopt_thumbnail .green_btn {
+    margin-top: 2em;
+}
+
+.adopt_thumbnail > h3 {
+    font-family: 'Maven Pro';
+    color: var(--dark-green-color);
+    font-size: 1.6em;
+    margin: 0.8em 1rem 0.8em;
+}
+
+.adopt_thumbnail > h3::before{
+    content: 'Meet ';
+    margin-right: 0.2em;
+    color: var(--dark-text-color);
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.adopt_thumbnail > .about {
+    margin: 0 1rem;
+    flex: 1;
+}
+
+.adopt_thumbnail p {
+    margin: 0.5em 0;
+}
+
+.adopt_thumbnail > .about > h4 {
+    color:  var(--light-green-color);
+    font-weight: 600;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.adopt_thumbnail > footer {
+    display: flex;
+    align-items: baseline;
+    margin: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.fa-map-marker {
+    font-size: 1.5em;
+    color:  var(--light-green-color);
+    display: inline-block;
+    margin-right: 0.3em;
+}
+
+.adopt_thumbnail > footer > .location {
+    flex: 1;
+}
+
+.adopt_thumbnail > footer > .location > p{
+    display: inline-block;
+}
+
+#adopt_thumbnails .green_btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  
+/* Found a Pet */
+
+#add_pet {
+    padding: 0 7rem;
+    margin: 4rem 0;
+    flex-grow: 1;
+}
+
+#add_pet > form > #load_data {
+    display: flex;
+    flex-wrap: wrap;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#add_pet > form > #load_data > label {
+    font-weight: 600;
+    display: inline-block;
+    padding: 0 1rem;
+    flex-grow: 1;
+    margin-bottom: 2em;
+    max-width: 25rem;
+}
+
+#add_pet > form > #load_data > label > input,  
+#add_pet > form label > textarea{
+    margin-top: 1em;
+    display: block;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: var(--light-color);
+    border: 2px solid var(--light-green-color);
+    width: calc(100% - 1em - 4px);
+}
+
+#add_pet > form > #load_data > label > input[type=text], 
+#add_pet > form label > select > option, 
+#add_pet > form label > textarea{
+    min-width: 15rem;
+    max-width: 25rem;
+}
+
+#add_pet > form label > textarea {
+    resize: none;
+}
+
+#add_pet > form label > select {
+    margin-top: 1em;
+    display: block;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: var(--light-color);
+    border: 2px solid var(--light-green-color);
+    width: 100%;
+}
+
+#add_pet > form #gender{
+    border: 0;
+    display: block;
+    margin: 0;
+    margin-bottom: 2em;
+    padding: 0 1rem;
+}
+
+#add_pet > form #gender > legend {
+    font-weight: 600;
+}
+
+#add_pet > form #gender label {
+    margin-top: 1em;
+    display: inline-block;
+}
+
+#add_pet > form #gender:first-of-type label{
+    margin-right: 1rem;
+}
+
+#add_pet > form > input[type=submit] {
+    margin: 3em auto;
+    color: var(--light-color);
+    border-radius: 2em;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    border: none;
+    text-decoration: none;
+    padding: 0.5em 4em;
+    display: block;
+}
+
+#add_pet > form > input[name=submit_pet] {
+    background-color: var(--light-green-color);
+}
+
+#add_pet > form > input[name=submit_pet]:hover {
+    background-color: var(--dark-green-color);
+    cursor: pointer;
+}
+
+#add_pet > form > input[name=delete_pet_btn] {
+    background-color: var(--error-color);
+}
+
+#add_pet .error {
+    margin: 3em auto;
+}
+
+#load_pictures {
+    border: 0;
+    margin: 0;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  
+#load_pictures > legend {
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+#load_pictures > fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    flex-basis: 48%;
+    margin-bottom: 2em;
+}
+  
+#load_pictures input[type=text] {
+    margin-left: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: var(--light-color);
+    border: 2px solid var(--light-green-color);
+}
+
+#load_pictures input[type="file" i]{
+    padding: 1em;
+}
+
+#load_pictures > fieldset:first-of-type input[type=text]{
+    border: 3px solid var(--dark-green-color);
+}
+
+#load_pictures > fieldset:first-of-type input[type=text]::placeholder{
+    color:  var(--dark-green-color)
+}
+
+
+/* My Proposals and Pending Proposals */
+
+#my_proposals_page {
+    padding: 0 8rem;
+    margin: 4rem 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#my_proposals_page  .error{
+    margin-bottom: 2rem;
+}
+
+#sent_proposals {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.proposal {
+    background-color: var(--light-color);
+    border-radius: 1em;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    -moz-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    margin-bottom: 4rem;
+    max-width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.proposal > header {
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: var(--light-green-color);
+    color: var(--light-color);
+    padding: 1em 2rem;
+    display: flex;
+}
+
+.proposal > header > section {
+    margin-right: 3em;
+    text-align: left;
+}
+
+.proposal > header > section > h4 {
+    font-family: 'Maven Pro';
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+}
+
+.proposal_content {
+    display: grid;
+    grid-template-columns: [left] 3fr [img] 1.2rem [content] 6fr [right];
+    grid-template-rows: [top] auto [name-end] auto [proposal-end] auto [state-end] auto [bottom];
+    padding: 1rem;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.proposal_content img {
+    grid-area: top / left / img / auto;
+    width: 100%;
+}
+
+.proposal_content > .pet_name {
+    grid-area: top / content / name-end / right;
+}
+
+.proposal_content > .proposal_text {
+    grid-area: name-end / content / proposal-end / right;
+}
+
+.proposal_content > .proposal_state {
+    grid-area: proposal-end / content / state-end / right;
+}
+
+.proposal_content > .proposal_state span {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.proposal_content > .proposal_state h3, .proposal_content > .pet_name h3 {
+    display: inline-block;
+}
+
+.proposal_content h3 {
+    color: var(--light-green-color);
+    font-family: 'Maven Pro';
+    font-weight: 600;
+    font-size: 1.1em;
+    margin: 1em 0.5em 0.5em 0;
+}
+
+.proposal footer {
+    text-align: right;
+    padding: 1rem;
+}
+
+#received_proposals form input[type=submit] {
+    color: var(--light-color);
+    border-radius: 2em;
+    font-weight: 700;
+    font-size:  0.8em;
+    text-transform: uppercase;
+    border: none;
+    padding: 0.5em 2.4em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 1em;
+}
+
+#received_proposals input[type=submit].accept {
+    background-color: var(--valid-color);
+    opacity: 70%;
+}
+
+#received_proposals input[type=submit].reject {
+    background-color: var(--error-color);
+    opacity: 70%;
+}
+
+#received_proposals input[type=submit].contact {
+    background-color: var(--dark-green-color);
+    opacity: 70%;
+}
+
+#received_proposals form input[type=submit]:hover {
+    opacity: 100%;
+}
+
+.handle_proposal{
+    padding: 1rem;;
+}
+
+.contact_interested textarea{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--light-color);
+    border: 2px solid var(--dark-green-color);
+    width: calc(100% - 1rem - 4px);
+}
+
+.contact_interested {
+    text-align: left;
+    padding: 1rem;
+}
+
+#received_proposals {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.accepted {
+    color: var(--valid-color)
+}
+
+.waiting {
+    color:  var(--intermittent-color);
+}
+
+.rejected {
+    color:  var(--error-color);
+}
+
+
+/* Messages */
+
+#messages_preview {
+    padding: 0 8rem;
+    margin: 4rem 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#messages_preview_content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.message_preview {
+    background-color: var(--light-color);
+    border-radius: 1em;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    -moz-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    margin-bottom: 4rem;
+    max-width: 48%;
+}
+
+.message_preview > header {
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: var(--light-green-color);
+    color: var(--light-color);
+    padding: 1em 2em;
+    display: flex;
+    text-align: left;
+}
+
+.message_preview  > header > section {
+    margin-right: 3em;
+}
+
+.message_preview  > header > section > h4 {
+    font-family: 'Maven Pro';
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+}
+
+.message_preview_content {
+    display: grid;
+    grid-template-columns: [left] 1.2fr [img] 1.2rem [content] 3fr [medium] 3fr [right];
+    grid-template-rows: [top] auto [to-from-end] auto [message-end] auto [bottom];
+    padding: 1rem 1rem 0 1rem;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.message_preview_content img {
+    grid-area: top / left / img / auto;
+    width: 100%;
+}
+
+.message_preview_content > .message_sender {
+    grid-area: top / content / to-from-end / medium;
+}
+
+.message_preview_content > .message_receiver {
+    grid-area: top / medium / to-from-end / right;
+}
+
+.message_preview_content > .message_text {
+    grid-area: to-from-end / content / message-end / right;
+}
+
+.message_preview_content > .message_sender h3, .message_preview_content > .message_receiver h3 {
+    display: inline-block;
+}
+
+.message_preview_content h3 {
+    color: var(--light-green-color);
+    font-family: 'Maven Pro';
+    font-weight: 600;
+    font-size: 1em;
+    margin: 0.5em 0.5em 0.5em 0;
+}
+
+.message_preview_content h3 a{
+    color: var(--dark-text-color);
+}
+
+.message_preview footer {
+    text-align: right;
+    padding: 1rem;
+}
+
+.message_preview footer a {
+    font-size: 0.7em;
+}
+
+/* Conversations */
+
+#conversation {
+    margin: 4rem 8rem 0 8rem;
+    flex-grow: 1;
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: 1em;
+}
+
+#conversation > header {
+    display: flex;
+    align-items: center;
+}
+
+#conversation > header > h3 {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+#conversation > header > h3 > a{
+    font-family: 'Maven Pro';
+    color: var(--dark-green-color);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+#conversation > header > h3::before {
+    content: 'Conversation about ';
+    margin-right: 0.2em;
+    color: var(--dark-text-color);
+    font-style: italic;
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+#conversation > header > img {
+    width: 6rem;
+}
+
+#conversation_messages {
+    margin-left: 8rem;
+    height: 16rem;
+    overflow-y: scroll;
+}
+
+.conversation_message {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+form.new_message{   
+    margin-left: 8rem;
+}
+
+form.new_message > input[name=message] {
+    margin-top: 1em;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: var(--light-color);
+    border: 2px solid var(--light-green-color);
+    min-width: 50%;
+}
+
+form.new_message > .green_btn {
+    margin-top: unset;
+}
+
+.conversation_message > .conversation_message_text {
+    font-family: 'Open Sans';
+    color: var(--dark-text-color);
+    margin: 0.8rem 1rem 0.8rem;
+    text-decoration: none;
+}
+
+.conversation_message > .sender {
+    font-family: 'Maven Pro';
+    font-weight: 600;
+    color: var(--dark-green-color);
+    font-size: 1.2rem;
+}
+
+.conversation_message > footer {
+    font-family: 'Open Sans';
+    color: var(--dark-text-color);
+}
+
+
+/* Pets */
+
+/* Adopt a Pet/Search Pets */
+
+/* Search Filters */
+
+#caracteristicas {
+    padding: 0 8rem;
+    margin: 4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  
+  #caracteristicas > h2 {
+    flex-basis: 100%;
+  }
+  
+  #caracteristicas legend{
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+  
+  #caracteristicas > fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #caracteristicas #pet_type{
+    display: flex;
+    flex-basis: 75%;
+    flex-wrap: wrap;
+  }
+  
+  #caracteristicas #pet_type input {
+    display: none;
+  }
+  
+  #caracteristicas #pet_type .pet_icon {
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+    -webkit-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    -moz-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    border: 2px solid var(--light-color);
+    border-radius: 0.5em;
+    padding: 0.2em;
+    cursor: pointer;
+    height: 7rem;
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--details-color);
+    opacity: 40%;
+  }
+  
+  
+  #caracteristicas #pet_type .pet_icon img {
+    max-width: 70%;
+  }
+  
+  #caracteristicas #pet_type label {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3em;
+    font-family: Open Sans;
+    color: var(--details-color);
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  #caracteristicas #pet_type input:checked + span{
+    opacity: 100%;
+  }
+  
+  #caracteristicas #pet_size, #caracteristicas #pet_gender, #caracteristicas #pet_age {
+    flex-basis: 33%;
+  }
+  
+  #caracteristicas #pet_size label, #caracteristicas #pet_age label,  #caracteristicas #pet_gender label  {
+    padding: 0em 1.3em 1em 0.3em;
+  }
+  
+  #caracteristicas #pet_size input, #caracteristicas #pet_gender input  {
+    margin: 0;
+  }
+  
+  #caracteristicas > input[type=submit] {
+    align-self: flex-end;
+    
+  }
+  
+  #pet_age {
+    flex:1;
+  }
+  
+  #pet_othersettings {
+    flex-basis: 25%;
+    margin: 0;
+    margin-bottom: 1em;
+  }
+  
+  #pet_othersettings label {
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  
+  #pet_othersettings select{
+    width: 100%;
+    padding: 0.5em;
+    margin: 1em 0 1em;
+    display: block;
+    border: 2px solid var(--details-color);
+    border-radius: 0.5em;
+    background-color: var(--light-color);
+  }
+  
+  #pet_othersettings input {
+    width: calc(100% - 4px - 1em);
+    padding: 0.5em;
+    margin: 1em 0 1em;
+    display: block;
+    border: 2px solid var(--details-color);
+    border-radius: 0.5em;
+    background-color: var(--light-color);
+  }
+  
+  /* Pet Posts */
+
+.pets {
+    margin: 4em 8rem;
+}
+  
+.pets .pet {
+    background-color: var(--light-color);
+    border-radius: 1em;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    -moz-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    margin-bottom: 4rem;
+}
+  
+.pets .pet_publication {
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: var(--light-green-color);
+    color: var(--light-color);
+    padding: 1em 3rem;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.pet_publication > section{
+    margin-right: 3em;
+}
+.pet_publication > section > h4{
+    font-family: 'Maven Pro';
+    display: inline-block;
+    margin: 0 1em 0 0;
+}
+.pet_publication > section > p{
+    display: inline-block;
+    margin: 0;
+}
+  
+.pet_content {
+    display: grid;  
+    grid-template-columns: [left] 6fr [img] 3em [content] 3fr [text-col] 3fr [text-limit] 2fr [right];
+    grid-template-rows: [top] auto [name-end] auto [species-end] auto [about-end] auto [text-row-end] auto [bottom];
+    padding: 2em 3rem;
+}
+  
+.pet_content > img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    grid-area: top / left / img / auto;
+    height: 25rem;
+}
+
+.pet_images > img {
+    display: block;
+    width: calc(100% - 1rem);
+    object-fit: cover;
+    object-position: top;
+    height: 25rem;
+}
+
+.pet_content .pet_images {
+    grid-area: top / left / img / auto;
+}
+
+.thumbs_container {
+    margin-top: 1rem;
+    font-size: 0;
+}
+
+.thumbs_container img {
+    margin-right: 1rem;
+    opacity: 70%;
+    width: calc(25% - 1rem);
+    cursor: pointer;
+}
+
+.thumbs_container img.active {
+    opacity: 100%;
+}
+
+  
+.pet_content > h3 {
+    font-family: 'Maven Pro';
+    color: var(--dark-text-color);
+    font-size: 1.6em;
+    grid-area: top / content / name-end / text-limit;
+    margin: 0;
+    margin-bottom: 0.4em;
+}
+  
+.pet_content > .add_favourite {
+    grid-area: top / text-limit / name-end / right;
+    text-align: right;
+}
+  
+.pet_content > .species {
+    grid-area: name-end / content / species-end / text-col;
+}
+  
+.pet_content > .breed {
+    grid-area: name-end / text-col / species-end / text-limit;
+}
+  
+.pet_content > .about {
+    grid-area: species-end / content / about-end / text-limit;
+}
+  
+.pet_content > .gender {
+    grid-area: about-end / content / text-row-end / text-col;
+}
+  
+.pet_content > .color {
+    grid-area: about-end / text-col / text-row-end / text-limit;
+}
+  
+.pet_content > .size {
+    grid-area: text-row-end / content / bottom / text-col;
+} 
+  
+.pet_content > .age {
+    grid-area: text-row-end / text-col / bottom / text-limit;
+}
+  
+.fa-star {
+    color: var(--details-color);
+    font-size: 1.5em;
+    text-align: right;
+    cursor: pointer;
+}
+  
+.pet_content > section{
+    margin-bottom: 0.8em;
+}
+  
+.pet_content > section > h4 {
+    color: var(--light-green-color);
+    font-weight: 600;
+    font-size: 1.2em;
+    margin: 0.5em 1em 0 0;
+    display: inline-block;
+}
+  
+.pet_content p {
+    display: inline-block;
+    margin: 0.4em 0;
+}
+  
+.pet_content > .about > p {
+    display: inherit;
+}
+  
+.pets .pet_contact , .pet_edit  {
+    padding: 1em 3rem;
+    background-color: var(--light-green-color);
+    border-radius: 0 0 0.5em 0.5em;
+    text-align: right;
+}
+  
+.pets .pet_contact  > a , .pet_edit > a {
+    color: var(--details-color);
+    background-color: var(--light-color);
+    border-radius: 2em;
+    font-weight: 700;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    border: 2px solid var(--details-color);
+    cursor: pointer;
+    padding: 0.4em 1.2em;
+    margin-left: 1em;
+    text-decoration: none;
+}
+  
+.pet_contact > a:hover, .pet_edit > a:hover {
+    color: var(--light-color);
+    background-color: var(--details-color);
+}
+  
+/* Pet Page */
+  
+#pet_page {
+    background-color: var(--light-color);
+    margin: 4rem 8rem;
+    -webkit-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    -moz-box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    box-shadow: 0px 0px 10px 3px var(--shadow-color);
+    border-radius: 1em;
+}
+  
+#pet_page .pet_publication {
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: var(--light-green-color);
+    color: var(--light-color);
+    padding: 1em 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+#pet_page .pet {
+    border-radius: 1em;
+    background-color: var(--light-color);
+    width: 100%;
+}
+
+#pet_page .pet .hint {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+  
+#adopt_pet_forms {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--light-green-color);
+    padding: 2em 3rem;
+    border-radius: 0 0 0.5em 0.5em;
+}
+  
+#adopt_pet_forms input[type="submit"] {
+    margin: 3em 0;
+    background-color: var(--light-color);
+    color: var(--dark-green-color);
+    border-radius: 2em;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    border: 2px solid var(--dark-green-color);
+    text-decoration: none;
+    padding: 0.5em 2em;
+    display: block;
+}
+  
+#adopt_pet_forms form {
+    width: 47%;
+}
+  
+#pet_page textarea{
+    margin-top: 1em;
+    display: block;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: var(--light-color);
+    border: 2px solid var(--dark-green-color);
+    width: calc(100% - 1em - 4px);
+}
+  
+#pet_page h2 {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    margin: 0;
+    padding: 0
+}
+
+
+
+
+
+/******************************************************************/
+
+
+input{
+    background: rgba(255,255,255,.1);
+	text-align:center;
+	border-radius: 4px;
+	font-size: 15px;
+	padding: 4px;
+	width: 25%;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	
+}
+ 
+
+
+form{
+	max-width: 50em;
+	padding: 10px 20px;
+	background: #f4f7f8;
+	margin: 10px auto;
+	padding: 20px;
+	background: #f4f7f8;
+	border-radius: 8px;
+}
+form fieldset{
+	border: none;
+}
+form legend {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+form label {
+	display: block;
+	margin-bottom: 4px;
+    font-weight: 600;
+}
+form input[type="text"],
+form input[type="date"],
+form input[type="datetime"],
+form input[type="email"],
+form input[type="number"],
+form input[type="search"],
+form input[type="time"],
+form input[type="url"],
+form textarea,
+form select {
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+}
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="datetime"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus,
+form input[type="search"]:focus,
+form input[type="time"]:focus,
+form input[type="url"]:focus,
+form textarea:focus,
+form select:focus{
+	background: #d2d9dd;
+}
+form select{
+	-webkit-appearance: menulist-button;
+	height:35px;
+}
+form .number {
+	background: #1abc9c;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
+}
+
+form input[type="submit"],
+form input[type="button"]
+{
+	position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #1abc9c;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+form input[type="submit"]:hover,
+form input[type="button"]:hover
+{
+	background: #109177;
+}
+
+
+
+input[type="datetime-local"] {
+    background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+  .bootstrap-timepicker-meridian, .meridian-column
+  {
+      display: none;
+  }
+
+
+  /************************* Dropdown Button *********************/
+.dropbtn {
+    background: #1abc9c;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border: 1px solid #16a085;
+    color: white;
+    padding: 16px;
+    border-radius: 15px 15px 15px 0px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 25em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content div {
+    color: black;
+    padding-left:12px;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background: #109177;}
+
+
+
+  .buttonmenu {
+    background: #1abc9c;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border: 1px solid #16a085;
+    color: white;
+    padding: 16px;
+    border-radius: 15px 15px 15px 15px;
+  }
+
+  .buttonmenu:hover {background: #109177;}
+
+
+ 
+ /* Table Styles */
+
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}

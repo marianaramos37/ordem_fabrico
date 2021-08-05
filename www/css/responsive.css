@@ -1,0 +1,448 @@
+@media only screen and (max-width: 1700px) {
+    /* Home Page */
+    #adopt_thumbnails {
+        padding: 0 15rem;
+    }
+}
+
+@media only screen and (max-width: 1367px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .pet_content > img {
+        height: 20rem;
+    }
+
+    .pet_images > img {
+        height: 20rem;
+    }
+
+    /* Home Page */
+    #adopt_thumbnails {
+        padding: 0 8rem;
+    }  
+
+    #banner_text {
+        margin-left: 7rem;
+    }
+
+    #adopt_thumbnails {
+        padding: 0 3rem;
+    }
+
+    /* Adopt a pet */
+
+    #caracteristicas > fieldset {
+        margin-bottom: 2rem;
+    }
+
+    #caracteristicas #pet_type label{
+        margin-bottom: 2rem;
+    }
+
+    #pet_othersettings {
+        flex-basis: unset;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #pet_othersettings label {
+        width: 32%;
+    }
+
+    #caracteristicas #pet_type{
+        flex-basis: unset;
+    }
+
+    #caracteristicas #pet_type label {
+        font-size: 1em;
+    }
+
+    #caracteristicas #pet_size, #caracteristicas #pet_gender, #caracteristicas #pet_age {
+        width: calc(30% - 5em);
+        flex-basis: 50%;
+    }
+
+    #caracteristicas #pet_type .pet_icon {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    /* Adapt main menu */
+
+    #desktop_menu > ul > li > a{
+        font-size: 0.8rem;
+        margin-left: 1rem;
+    }
+
+    #desktop_menu > ul > li > ul > li > a {
+        font-size:  0.8rem;
+    }
+
+    #desktop_menu > ul > li > ul {
+        margin-left: unset;
+    }
+
+    #desktop_menu > ul > li > ul > li {
+        min-width: unset;
+    }
+
+    /* Adapt left and right padding */
+
+    #menu-top{
+        padding: 0.8rem 3rem;
+    }
+
+    #menu-bar {
+        padding: 0.8rem 3rem;
+    }
+
+    body > footer{
+        padding: 0.5rem 3rem;
+    }
+
+    .pets {
+        margin: 4em 3rem;
+    }
+
+    #add_pet {
+        padding: 0 2rem;
+    }
+
+    #my_proposals_page {
+        padding: 0 3rem;
+    }
+
+    #messages_preview {
+        padding: 0 3rem;
+    }
+
+    #conversation {
+        margin: 4em 3rem 0 3rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    /* Menu Responsivo */
+
+    #desktop_menu {
+        display: none;
+    }
+
+    #responsive_menu_icon {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    #responsive_menu ul {
+        transform: translate(0%);
+        transition: 0.8s;
+        opacity: 0;
+        margin: 0;
+    }
+
+    #responsive_menu ul.active{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45vw;
+        height: 100vh;
+        background-color: var(--light-color);
+        box-shadow: 0 0 30px var(--menu-shadow-color);
+        padding: 3rem;
+        opacity: 100%;
+    }
+
+    #responsive_menu > ul{
+        margin: 0;
+        padding: 0;
+    }
+      
+    #responsive_menu > ul > li {
+        list-style-type: none;
+        position: relative;
+        margin-top: 2rem;
+    }
+      
+    #responsive_menu > ul > li > a {
+        text-decoration: none;
+        color: var(--dark-text-color);
+        font-family: 'Maven Pro';
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .stop-scrolling { 
+        height: 100%; 
+        overflow: hidden; 
+    } 
+
+    /* Home Page */
+
+    #banner_text {
+        margin-left: 4rem;
+    }
+
+    #banner_text > h2 {
+        margin-bottom: 0;
+    }
+
+    .beige_btn {
+        margin-top: 1em;
+    }
+
+    /*Adopt Pet - filters */
+
+    #caracteristicas {
+        padding: 0 3rem;
+    }
+
+    /* Messages */
+    .message_preview {
+        max-width: unset;
+    }
+
+    /* Proposals */
+    .proposal {
+        max-width: unset;
+    }
+
+    /* Pet posts */
+
+    .pet_content {
+        grid-template-rows: [top] auto [name-end] auto [species-end] auto [about-end] auto [text-row-end] auto [bottom] auto [bottom2];
+    }
+
+    #pet_page {
+        margin: 4rem 3rem;
+    }
+
+    .pet_content > img {
+        grid-area: bottom2 / left / right / bottom2;
+    }
+    
+    .pet_content .pet_images {
+        grid-area: bottom2 / left / right / bottom2;
+    }
+
+    .pet_content > h3 {
+        grid-area: top / left / species-end / right;
+    }
+      
+    .pet_content > .species {
+        grid-area: species-end / left / species-end / text-col;
+    }
+      
+    .pet_content > .breed {
+        grid-area: species-end / content / species-end / text-limit;
+    }
+      
+    .pet_content > .about {
+        grid-area: about-end / left /text-row-end / text-limit;
+    }
+      
+    .pet_content > .gender {
+        grid-area: text-row-end / left / bottom / text-col;
+    }
+      
+    .pet_content > .color {
+        grid-area: text-row-end / content / bottom/ text-limit;
+    }
+      
+    .pet_content > .size {
+        grid-area: bottom / left / bottom2 / text-col;
+    } 
+      
+    .pet_content > .age {
+        grid-area: bottom / content / bottom2 / text-limit;
+    }
+
+    /* Adopt a Pet */
+
+    #adopt_pet_forms form {
+        width: 100%;
+    }
+
+    /* Messages */
+
+    form.new_message > input[name=message] {
+        width: calc(100% - 1em - 4px);
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Menus */
+    #menu-top {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #menu-bar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #social {
+        flex: none;
+        width: 5.10em;
+    }
+
+    #desktop_session_menu > ul > li > p {
+        padding-left: 0.4em;
+    }
+    
+    #desktop_session_menu > ul > li {
+        margin: 0 0.2em;
+    }
+
+    /* Auth */
+
+    #register, #login, #editProfile  {
+        padding: 0 3rem;
+    }
+
+    /*Homepage*/
+
+    #banner_text {
+        margin-left: 1rem;
+        font-size: 0.6rem;
+        max-width: 16em;
+    }
+
+    #banner_text > p, #banner_text .beige_btn {
+        display: none;
+    }
+
+    #adopt_thumbnails {
+        padding: 0 1rem;
+        margin: 0;
+    }
+
+    #adopt_thumbnails > h2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .adopt_thumbnail {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .adopt_thumbnail > h3, .adopt_thumbnail > .about, .adopt_thumbnail > footer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Search Pets */
+
+    #caracteristicas {
+        padding: 0 1rem;
+    }
+    
+    /* Pet Posts */
+
+    .pets {
+        margin: 4em 1rem;
+    }
+
+    .pets .pet_publication {
+        display: block;
+        padding: 1em 2em;
+    }
+
+    .pet_publication > section {
+        margin-right: 0rem;
+        margin-left: 0.2rem;
+        width: 100%;
+    }
+
+    #pet_page {
+        margin: 1rem 0.5rem;
+    }
+
+    .pet_content {
+        padding: 2em 2em;
+    }
+
+    .pet_content > section > h4 {
+        margin-right: 0.2rem;
+    }
+
+    #adopt_pet_forms {
+        padding: 2em 2em;
+    }
+      
+     /* Messages */
+
+     #messages_preview {
+        padding: 0 1rem;
+    }
+
+    .message_preview > header {
+        display: block;
+    }
+
+    .message_preview > header > section {
+        margin-right: 0;
+    }
+
+    /* Proposals */
+
+    #my_proposals_page {
+        padding: 0 1rem;
+    }
+
+    .proposal > header {
+        display: block;
+    }
+
+    .proposal > header > section {
+        margin-right: 0%;
+    }
+
+    /* Conversations */
+
+    #conversation {
+        margin: 4em 1rem 0 1rem;
+    }
+
+    #conversation > header > h3::before{
+        font-size: 1.3rem;
+    }
+
+    #conversation > header > h3 > a {
+        font-size: 1.7rem;
+    }
+
+    #conversation_messages {
+        margin-left: 0;
+    }
+
+    form.new_message {
+        margin-left: 0%;
+    }
+
+    /* Add Pet */
+
+    #add_pet {
+        padding: 0;
+    }
+        
+}
